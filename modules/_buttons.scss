@@ -1,0 +1,36 @@
+%button {
+	-webkit-appearance: button; /* Corrects inability to style clickable 'input' types in iOS */
+	background: #e6e6e6;
+	margin: 0; /* Addresses margins set differently in IE6/7, F3/4, S5, Chrome */
+	border: 1px solid;
+	border-color: #ccc #ccc #bbb;
+	border-radius: .1875em;
+	padding: .6em 1.5em .4em;
+	/* Improve cursor style usability and consistency between image-type 'input' and others */
+	cursor: pointer;
+	color: rgba(0, 0, 0, .8);
+	/* Correct font size not being inherited in all browsers */
+	font-size: 100%;
+	/* Improve appearance and consistency in all browsers */
+	vertical-align: baseline;
+
+	&:hover {
+		background: #d5d5d5;
+		border-color: #ccc #bbb #aaa;
+	}
+
+	&:focus,
+	&:active {
+		border-color: #aaa #bbb #bbb;
+	}
+}
+
+button {
+	@extend %button;
+
+	&::-moz-focus-inner {
+		/* Correct oddly displayed inner padding and border in FF3/4 - www.sitepen.com/blog/2008/05/14/the-devils-in-the-details-fixing-dojos-toolbar-buttons/ */
+		border: 0;
+		padding: 0;
+	}
+}

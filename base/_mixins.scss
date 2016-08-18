@@ -1,0 +1,17 @@
+@mixin breakpoint($point) {
+	@if $point == short {
+		@media (min-width: 30em) { @content; }
+	}
+	@else if $point == tall {
+		@media (min-width: 45em) { @content; }
+	}
+	@else if $point == grande {
+		@media (min-width: 60em) { @content; }
+	}
+	@else if $point == venti {
+		@media (min-width: 100em) { @content; }
+	}
+	@else {
+		@media (min-width: $point) { @content; }
+	}
+}

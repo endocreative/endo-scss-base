@@ -1,0 +1,26 @@
+.site-footer {}
+
+.footer-info {
+	@extend .clearfix;
+	max-width: 960px;
+	margin: 26px auto 0;
+}
+
+.footer-widget {
+	margin-bottom: 40px;
+	text-align: center;
+
+	@include breakpoint(tall) {
+		float: left;
+		width: calc(100% / 3);
+		text-align: left;
+	}
+
+	h3 {
+		text-transform: uppercase;
+	}
+
+	p {
+		margin-bottom: 0;
+	}
+}
