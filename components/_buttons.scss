@@ -1,5 +1,4 @@
 %button {
-	-webkit-appearance: button; /* Corrects inability to style clickable 'input' types in iOS */
 	background: #e6e6e6;
 	margin: 0; /* Addresses margins set differently in IE6/7, F3/4, S5, Chrome */
 	border: 1px solid;
@@ -27,6 +26,7 @@
 
 button {
 	@extend %button;
+	-webkit-appearance: button; /* Corrects inability to style clickable 'input' types in iOS */
 
 	&::-moz-focus-inner {
 		/* Correct oddly displayed inner padding and border in FF3/4 - www.sitepen.com/blog/2008/05/14/the-devils-in-the-details-fixing-dojos-toolbar-buttons/ */
