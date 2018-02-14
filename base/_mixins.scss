@@ -21,3 +21,32 @@
 	-moz-transition: all 0.3s ease;
 	transition: all 0.3s ease;
 }
+
+@mixin selection($color: #b3d4fc) {
+	::-moz-selection {
+		background: $color;
+		text-shadow: none;
+	}
+	::selection {
+		background: $color;
+		text-shadow: none;
+	}
+}
+
+@mixin tracking($num) {
+	letter-spacing: ( $num / 1000 ) * 1em;
+}
+
+@mixin button() {
+	@include transition();
+	/* Addresses margins set differently in IE6/7, F3/4, S5, Chrome */
+	margin: 0;
+	border: .0625em solid;
+	border-radius: .1875em;
+	/* Improve cursor style usability and consistency between image-type 'input' and others */
+	cursor: pointer;
+	/* Correct font size not being inherited in all browsers */
+	font-size: 100%;
+	/* Improve appearance and consistency in all browsers */
+	vertical-align: baseline;
+}

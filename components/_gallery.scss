@@ -1,5 +1,5 @@
 .gallery {
-	margin-bottom: 1.5em;
+	margin-bottom: #{$line_height}em;
 }
 
 .gallery-item {
@@ -9,7 +9,7 @@
 	vertical-align: top;
 
 	.gallery-columns-2 & {
-		max-width: 50%;
+		max-width: calc(100% / 2);
 	}
 
 	.gallery-columns-3 & {
@@ -17,11 +17,11 @@
 	}
 
 	.gallery-columns-4 & {
-		max-width: 25%;
+		max-width: calc(100% / 4);
 	}
 
 	.gallery-columns-5 & {
-		max-width: 20%;
+		max-width: calc(100% / 5);
 	}
 
 	.gallery-columns-6 & {
@@ -33,7 +33,7 @@
 	}
 
 	.gallery-columns-8 & {
-		max-width: 12.5%;
+		max-width: calc(100% / 8);
 	}
 
 	.gallery-columns-9 & {

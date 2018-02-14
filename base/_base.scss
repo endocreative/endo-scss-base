@@ -4,19 +4,26 @@
 @import 'mixins';
 @import 'helpers';
 
+@include selection(); // accepts color value or defaults to #b3d4fc
+
+:last-child {
+	margin-bottom: 0;
+}
+
 body,
 button,
 input,
 select,
 textarea {
-	color: #333;
-	line-height: 1.5;
-	font-family: sans-serif;
+	color: $body_color;
+	line-height: $line_height;
+	font-family: $body_font;
 }
 
 h1, h2, h3, h4, h5, h6 {
 	clear: both;
 	margin-bottom: 1em;
+	font-family: $heading_font;
 }
 
 h1 {
@@ -32,8 +39,7 @@ h3 {
 }
 
 p {
-	margin-bottom: 1.5em;
-	font-size: 1em;
+	margin-bottom: #{$line_height}em;
 }
 
 b, strong {
@@ -45,23 +51,23 @@ dfn, cite, em, i {
 }
 
 blockquote {
-	margin: 0 1.5em;
+	margin: 0 #{$line_height}em;
 	font-style: italic;
 }
 
 address {
-	margin: 0 0 1.5em;
+	margin: 0 0 #{$line_height}em;
 }
 
 pre {
 	background: #eee;
 	font-family: "Courier 10 Pitch", Courier, monospace;
 	font-size: .9375em;
-	line-height: 1.6;
-	margin-bottom: 1.6em;
+	line-height: $line_height;
+	margin-bottom: #{$line_height}em;
 	max-width: 100%;
 	overflow: auto;
-	padding: 1.6em;
+	padding: #{$line_height}em;
 }
 
 code, kbd, tt, var {
@@ -69,8 +75,8 @@ code, kbd, tt, var {
 }
 
 abbr, acronym {
-	border-bottom: 1px dotted #666;
 	cursor: help;
+	text-decoration: dotted underline;
 }
 
 mark, ins {
@@ -104,15 +110,15 @@ big {
 
 hr {
 	display: block;
-	height: 1px;
+	height: .0625em;
 	border: 0;
-	border-top: 1px solid #ccc;
-	margin: 1em 0;
+	border-top: .0625em solid #ccc;
+	margin: #{$line_height}em 0;
 	padding: 0;
 }
 
 ul, ol {
-	margin: 0 0 1.5em 3em;
+	margin: 0 0 #{$line_height}em #{$line_height}em;
 }
 
 ul {
@@ -125,7 +131,7 @@ ol {
 
 li > ul, li > ol {
 	margin-bottom: 0;
-	margin-left: 1.5em;
+	margin-left: #{$line_height}em;
 }
 
 dt {
@@ -133,12 +139,12 @@ dt {
 }
 
 dd {
-	margin: 0 1.5em 1.5em;
+	margin: 0 #{$line_height}em #{$line_height}em;
 }
 
 img {
-	height: auto; /* Make sure images are scaled correctly. */
 	max-width: 100%; /* Adhere to container width. */
+	height: auto; /* Make sure images are scaled correctly. */
 }
 
 /* Make sure embeds and iframes fit their containers */
@@ -151,7 +157,7 @@ figure {
 }
 
 table {
-	margin: 0 0 1.5em;
+	margin: 0 0 #{$line_height}em;
 	width: 100%;
 }
 
@@ -159,17 +165,17 @@ th {
 	font-weight: bold;
 }
 
-a {
-	color: #F0141E;
+// a {
+// 	color: #F0141E;
 
-	&:visited {
-		color: #F0141E;
-	}
+// 	&:visited {
+// 		color: #F0141E;
+// 	}
 
-	&:hover, &:focus, &:active {
-		color: #F0141E;
-	}
-}
+// 	&:hover, &:focus, &:active {
+// 		color: #F0141E;
+// 	}
+// }
 
 audio, canvas, iframe, img, svg, video {
 	vertical-align: middle;

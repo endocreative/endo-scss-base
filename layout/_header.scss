@@ -1,26 +1,10 @@
-.header-wrap {
-	@extend .clearfix;
-}
+.site-header {}
 
-.site-header {
-	position: relative;
-
-	@include breakpoint(grande) {
-		max-width: 960px;	
-		margin: 0 auto;
-	}
-}
-
-.logo {
+.site-title {
 	display: block;
 	background: url(../images/logo.png) no-repeat center center / contain;
-	width: 111px;
-	height: 73px;
-	float: left;
-	text-indent: -9999px;
-
-	@include breakpoint(tall) {
-		width: 223px;
-		height: 147px;
-	}
+	// width: 300px;
+	// height: 75px;
+	margin: 0;
+	font-size: 1em;
 }
