@@ -178,7 +178,7 @@
 	right: 20px;
 	width: 47px;
 	height: 47px;
-	&:hover {
+	&:hover, &:active, &:focus {
 		background: orange;
 		color: white;
 	}
